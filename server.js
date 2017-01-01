@@ -75,6 +75,13 @@ app.get('/about', (request, response) => {
   });
 });
 
+app.get('/projects', (request, response) => {
+  // response.send('about page');
+  response.render('projects.hbs', {
+    pageTitle: 'Projects Page'
+  });
+});
+
 // simulate when request failed
 // errorMessage with type string
 app.get('/bad', (request, response) => {
